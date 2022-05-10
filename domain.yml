@@ -1,0 +1,81 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_lower_stress
+  - ask_eat_healthy
+  - ask_exercise
+  - ask_food
+  - north_indian
+  - south_indian
+  - order_food
+
+
+
+entities:
+  - exercise
+  - sleep
+  - stress
+
+
+responses:
+  utter_greet:
+  - text: "Hey! It's time for your daily wellness check. Tracking heealthy habits is a great way to measure your progress over time. Would you like to answer a few questions about your health?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_stress_info:
+  - text: "It's ok to feel overwhelmed at times. Try to set realistic expectations and exercise time management techniques, like divviding large tasks into more manageable pieces. Relaxation techniques, like deep breathing and meditation , can also be beneficial."
+
+  utter_exercise_info:
+  - text: "Most healthy adults should aim to get about 150 min of moderate exercise per week. This includes activities like a brisk walk or yard work."
+
+  utter_diet_info:
+  - text: "A healthy diet includes fruits and vegetables, whole grains, dairy, lean protein and plant based fats. While there is room in a healthy diet for treats, added sugar should be eaten sparingly. Aim for a variety of foods, and balance. "
+
+  utter_ask_confirm_exercise:
+  - text: "Did you exercise yesterday? Dont sweat it if you didn't run a marathon - walks count!"
+
+  utter_ask_sleep:
+  - text: "How much sleep did you get last night?"
+
+  utter_ask_exercise:
+  - text: "What kind of exercise did you do?"
+  utter_ask_diet:
+  - text: "Did you stick to a healthy diet yesterday?"
+  utter_ask_stress:
+  - text: "Is your stress level low, medium or high?"
+  utter_ask_cuisine:
+  - text: "Would you like north indian or south indian cuisine?"
+  utter_north_indian:
+  - text: "We serve aloo parotha in north indian cuisine."
+  utter_south_indian:
+  - text: "We serve masala dosa in south indian"
+  utter_ask_goal:
+  - text: "Setting goals -- even small ones -- is a great way to focus your day. What do you want to accomplish through this?"
+  utter_order_food:
+  - text: "Sure, please wait while we get your order."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

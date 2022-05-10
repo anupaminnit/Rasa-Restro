@@ -1,0 +1,66 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: ask food cuisine 1
+  steps:
+  - intent: ask_food
+  - action: utter_ask_cuisine
+  - intent: north_indian
+  - action: utter_north_indian
+  - intent: order_food
+  - action: utter_order_food
+
+
+- story: ask food cuisine 2
+  steps:
+  - intent: ask_food
+  - action: utter_ask_cuisine
+  - intent: south_indian
+  - action: utter_south_indian
+  - intent: order_food
+  - action: utter_order_food
+
+
+- story: ask lower stress
+  steps:
+  - intent: ask_lower_stress
+  - action: utter_stress_info
+
+- story: ask_eat-healthy
+  steps:
+  - intent: ask_eat_healthy
+  - action: utter_diet_info
+
+- story: ask_exercise
+  steps:
+  - intent: ask_exercise
+  - action: utter_exercise_info    
